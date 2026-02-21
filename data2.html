@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global EV Outlook 2025 — All Tables Explained</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+:root {
+  --bg: #F5F7FA;
+  --white: #FFFFFF;
+  --dark: #0D1B2A;
+  --blue: #0066FF;
+  --cyan: #00C2FF;
+  --green: #00C48C;
+  --red: #FF3B5C;
+  --gold: #F5A623;
+  --orange: #FF6B35;
+  --muted: #7A8EA8;
+  --border: #E2E8F0;
+  --text: #1A2B3C;
+}
+body {
+  background: var(--bg);
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 0 60px;
+}
+
+/* ── HEADER ── */
+.site-header {
+  background: var(--dark);
+  padding: 50px 60px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.site-header::before {
+  content:'';
+  position:absolute; top:-120px; right:-120px;
+  width:400px; height:400px;
+  background: radial-gradient(circle, rgba(0,102,255,.2) 0%, transparent 70%);
+}
+.header-tag {
+  display:inline-block;
+  background:var(--blue); color:#fff;
+  font-size:11px; font-weight:600; letter-spacing:3px;
+  padding:5px 14px; text-transform:uppercase; margin-bottom:18px;
+}
+.site-header h1 {
+  font-family:'Syne',sans-serif;
+  font-size:52px; font-weight:800; color:#fff; line-height:1.05;
+}
+.site-header h1 span { color:var(--cyan); }
+.site-header p {
+  color:rgba(255,255,255,.5); font-size:14px; margin-top:10px; letter-spacing:1px;
+}
+.hero-stats {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  gap:0; margin-top:35px;
+  border-top:1px solid rgba(255,255,255,.1);
+}
+.hs {
+  padding:18px 20px;
+  border-right:1px solid rgba(255,255,255,.1);
+}
+.hs:last-child { border-right:none; }
+.hs .v {
+  font-family:'Syne',sans-serif; font-size:32px; font-weight:800;
+}
+.hs .v.blue { color:var(--cyan); }
+.hs .v.green { color:var(--green); }
+.hs .v.red { color:var(--red); }
+.hs .v.gold { color:var(--gold); }
+.hs .l { font-size:11px; color:rgba(255,255,255,.4); letter-spacing:1px; text-transform:uppercase; margin-top:4px; }
+
+/* ── NAV ── */
+.toc {
+  background:#fff; padding:24px 60px;
+  border-bottom:2px solid var(--border);
+  display:flex; flex-wrap:wrap; gap:8px; align-items:center;
+}
+.toc-label { font-size:11px; font-weight:600; letter-spacing:2px; color:var(--muted); text-transform:uppercase; margin-right:8px; }
+.toc a {
+  text-decoration:none; color:var(--dark);
+  background:var(--bg); border:1px solid var(--border);
+  font-size:11px; font-weight:600; padding:4px 12px;
+  transition:all .2s;
+}
+.toc a:hover { background:var(--blue); color:#fff; border-color:var(--blue); }
+
+/* ── SECTION WRAPPER ── */
+.section {
+  margin: 36px 40px 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.section-header {
+  padding: 22px 30px;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: flex-start; gap: 16px;
+}
+.sec-num {
+  font-family:'DM Mono',monospace;
+  font-size:11px; font-weight:500; letter-spacing:2px;
+  color:var(--white); background:var(--blue);
+  padding:4px 10px; flex-shrink:0; margin-top:2px;
+}
+.sec-num.green { background:var(--green); }
+.sec-num.red { background:var(--red); }
+.sec-num.gold { background:var(--gold); }
+.sec-num.orange { background:var(--orange); }
+.sec-num.dark { background:var(--dark); }
+
+.sec-title {
+  font-family:'Syne',sans-serif;
+  font-size:18px; font-weight:700; color:var(--dark); line-height:1.3;
+}
+.sec-source {
+  font-size:11px; color:var(--muted); margin-top:4px; letter-spacing:1px;
+}
+
+.section-body { padding: 28px 30px; }
+
+/* ── TABLES ── */
+table {
+  width:100%; border-collapse:collapse; margin-bottom:24px;
+}
+th {
+  background:var(--dark); color:#fff;
+  font-family:'DM Mono',monospace; font-size:11px;
+  font-weight:500; letter-spacing:1px; text-transform:uppercase;
+  padding:10px 14px; text-align:left;
+}
+td {
+  padding:10px 14px; font-size:13px;
+  border-bottom:1px solid var(--border);
+}
+tr:last-child td { border-bottom:none; }
+tr:nth-child(even) td { background:#F9FAFB; }
+tr:hover td { background:#EEF4FF; }
+
+.val-blue { font-family:'DM Mono',monospace; font-weight:500; color:var(--blue); }
+.val-green { font-family:'DM Mono',monospace; font-weight:500; color:var(--green); }
+.val-red { font-family:'DM Mono',monospace; font-weight:500; color:var(--red); }
+.val-gold { font-family:'DM Mono',monospace; font-weight:500; color:var(--gold); }
+.val-orange { font-family:'DM Mono',monospace; font-weight:500; color:var(--orange); }
+
+/* ── EXPLANATION BOX ── */
+.explain {
+  background:#F0F7FF;
+  border-left:4px solid var(--blue);
+  padding:18px 22px;
+  border-radius:0 4px 4px 0;
+}
+.explain.green { background:#F0FFF8; border-left-color:var(--green); }
+.explain.red { background:#FFF0F3; border-left-color:var(--red); }
+.explain.gold { background:#FFFBF0; border-left-color:var(--gold); }
+.explain.orange { background:#FFF5F0; border-left-color:var(--orange); }
+.explain.dark { background:#F0F2F5; border-left-color:var(--dark); }
+
+.explain h4 {
+  font-family:'Syne',sans-serif; font-size:14px; font-weight:700;
+  color:var(--dark); margin-bottom:10px; display:flex; align-items:center; gap:8px;
+}
+.explain p {
+  font-size:13px; color:#3A4D63; line-height:1.75;
+}
+.explain p strong { color:var(--dark); }
+
+/* ── KEY TAKEAWAY ── */
+.takeaway {
+  display:flex; align-items:flex-start; gap:12px;
+  background:var(--dark); color:#fff;
+  padding:14px 18px; margin-top:16px;
+}
+.takeaway .icon { font-size:18px; flex-shrink:0; margin-top:1px; }
+.takeaway p { font-size:12px; line-height:1.7; color:rgba(255,255,255,.8); }
+.takeaway p strong { color:var(--cyan); }
+
+/* ── SIMPLE ANALOGY ── */
+.analogy {
+  background:#FFFDF0; border:1px dashed var(--gold);
+  padding:14px 18px; margin-top:14px;
+  display:flex; gap:12px; align-items:flex-start;
+}
+.analogy .icon { font-size:20px; flex-shrink:0; }
+.analogy p { font-size:12px; color:#5A4A00; line-height:1.7; }
+
+/* ── BADGE ── */
+.badge {
+  display:inline-block; font-size:10px; font-weight:700;
+  letter-spacing:1px; padding:3px 8px;
+}
+.badge.pos { background:rgba(0,196,140,.15); color:var(--green); border:1px solid rgba(0,196,140,.3); }
+.badge.neg { background:rgba(255,59,92,.12); color:var(--red); border:1px solid rgba(255,59,92,.3); }
+.badge.neu { background:rgba(0,102,255,.1); color:var(--blue); border:1px solid rgba(0,102,255,.2); }
+
+/* ── SPLIT GRID ── */
+.split { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+
+/* ── FOOTER ── */
+.site-footer {
+  margin:40px 40px 0;
+  background:var(--dark); padding:24px 30px;
+  display:flex; justify-content:space-between; align-items:center;
+}
+.site-footer p { font-size:11px; color:rgba(255,255,255,.4); }
+.site-footer strong { color:var(--cyan); }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="site-header">
+  <div class="header-tag">IEA Global EV Outlook 2025</div>
+  <h1>All 18 Tables<br><span>Simply Explained</span></h1>
+  <p>Every table from the IEA report — with clear, easy-to-understand explanations</p>
+  <div class="hero-stats">
+    <div class="hs"><div class="v blue">17M</div><div class="l">EVs Sold 2024</div></div>
+    <div class="hs"><div class="v green">+25%</div><div class="l">YoY Growth</div></div>
+    <div class="hs"><div class="v red">34×</div><div class="l">Since 2015</div></div>
+    <div class="hs"><div class="v gold">>20%</div><div class="l">Market Share</div></div>
+  </div>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+  <span class="toc-label">Jump to</span>
+  <a href="#t1">T1</a><a href="#t2">T2</a><a href="#t3">T3</a><a href="#t4">T4</a>
+  <a href="#t5">T5</a><a href="#t6">T6</a><a href="#t7">T7</a><a href="#t8">T8</a>
+  <a href="#t9">T9</a><a href="#t10">T10</a><a href="#t11">T11</a><a href="#t12">T12</a>
+  <a href="#t13">T13</a><a href="#t14">T14</a><a href="#t15">T15</a><a href="#t16">T16</a>
+  <a href="#t17">T17</a><a href="#t18">T18</a>
+</div>
+
+<!-- ══ TABLE 1 ══ -->
+<div class="section" id="t1">
+  <div class="section-header">
+    <span class="sec-num">TABLE 01</span>
+    <div>
+      <div class="sec-title">Global Electric Car Sales (2015–2025)</div>
+      <div class="sec-source">📄 IEA PDF — Page 2 · Slide: "Global electric car sales continue to break records"</div>
+    </div>
+  </div>
+  <div class="section-body">
+    <table>
+      <tr><th>Year</th><th>Global Sales</th><th>Global Sales Share</th></tr>
+      <tr><td>2015</td><td class="val-blue">~0.5M</td><td>~1%</td></tr>
+      <tr><td>2016</td><td class="val-blue">~0.8M</td><td>~1%</td></tr>
+      <tr><td>2017</td><td class="val-blue">~1.1M</td><td>~1.5%</td></tr>
+      <tr><td>2018</td><td class="val-blue">~2.0M</td><td>~2.5%</td></tr>
+      <tr><td>2019</td><td class="val-blue">~2.2M</td><td>~2.5%</td></tr>
+      <tr><td>2020</td><td class="val-blue">~3.1M</td><td>~4.5%</td></tr>
+      <tr><td>2021</td><td class="val-blue">~6.5M</td><td>~9%</td></tr>
+      <tr><td>2022</td><td class="val-blue">~10.2M</td><td>~14%</td></tr>
+      <tr><td>2023</td><td class="val-blue">~13.7M</td><td>~18%</td></tr>
+      <tr><td>2024</td><td class="val-green">~17.0M</td><td><strong>>20%</strong></td></tr>
+      <tr><td>2025 (Forecast)</td><td class="val-gold">~22.0M</td><td>~25%</td></tr>
+    </table>
+    <div class="explain">
+      <h4>💡 What does this mean?</h4>
+      <p>This table shows how electric car sales have grown every single year from 2015 to 2025. In 2015, only <strong>0.5 million</strong> EVs were sold — that means only 1 out of every 100 cars sold was electric. By 2024, this jumped to <strong>17 million</strong> — meaning more than <strong>1 in every 5 cars</strong> sold worldwide is now electric. The growth is not slowing down — it is actually speeding up every year.</p>
+    </div>
+    <div class="analogy">
+      <div class="icon">💡</div>
+      <p><strong>Simple Example:</strong> Imagine a school where in 2015 only 1 student out of 100 used a smartphone. By 2024, more than 20 students out of 100 use one. That is exactly how fast EVs have grown in the car market.</p>
+    </div>
+    <div class="takeaway">
+      <div class="icon">🔑</div>
+      <p><strong>Key Point:</strong> EV sales grew <strong>34 times</strong> in just 9 years. In 2025, sales are expected to cross 22 million. By 2030, EVs will be over 40% of all global car sales.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TABLE 2 ══ -->
+<div class="section" id="t2">
+  <div class="section-header">
+    <span class="sec-num green">TABLE 02</span>
+    <div>
+      <div class="sec-title">Electric Car Production vs Demand by Region (2024)</div>
+      <div class="sec-source">📄 IEA PDF — Page 4 · Slide: "China remains the world's largest EV manufacturing hub"</div>
+    </div>
+  </div>
+  <div class="section-body">
+    <table>
+      <tr><th>Region</th><th>Production (Makes)</th><th>Demand (Needs)</th><th>Status</th></tr>
+      <tr><td>🇨🇳 China</td><td class="val-green">12.4M</td><td>11.2M</td><td><span class="badge pos">▲ Surplus Exporter</span></td></tr>
+      <tr><td>🇪🇺 European Union</td><td class="val-blue">2.4M</td><td>2.2M</td><td><span class="badge pos">▲ Small Surplus</span></td></tr>
+      <tr><td>🇺🇸 United States</td><td class="val-red">1.1M</td><td>1.6M</td><td><span class="badge neg">▼ Net Importer</span></td></tr>
+      <tr><td>🌏 Other Asia Pacific</td><td class="val-blue">1.0M</td><td>0.8M</td><td><span class="badge pos">▲ Small Surplus</span></td></tr>
+      <tr><td>🌍 Other Europe</td><td class="val-red">0.1M</td><td>0.9M</td><td><span class="badge neg">▼ Net Importer</span></td></tr>
+      <tr><td>🌎 Other North America</td><td class="val-red">0.2M</td><td>0.3M</td><td><span class="badge neg">▼ Net Importer</span></td></tr>
+      <tr><td>🌐 Others</td><td class="val-red">&lt;0.1M</td><td>0.3M</td><td><span class="badge neg">▼ Net Importer</span></td></tr>
+    </table>
+    <div class="explain green">
+      <h4>💡 What does this mean?</h4>
+      <p>This table compares how many EVs each region <strong>makes</strong> versus how many it <strong>needs</strong>. China makes <strong>1.2 million more</strong> than it needs — so it exports the extra. The US makes only 1.1M but needs 1.6M — so it has to <strong>buy 0.5M from other countries</strong>. This is called being a "net importer." China makes <strong>5 times more EVs</strong> than the EU and <strong>11 times more</strong> than the US.</p>
+    </div>
+    <div class="analogy">
+      <div class="icon">💡</div>
+      <p><strong>Simple Example:</strong> Think of a bakery. China's bakery makes more bread than it can eat — so it sells the extra to other countries. The US bakery doesn't make enough bread for itself — so it has to buy from outside. China is the bakery. The US is the customer.</p>
+    </div>
+    <div class="takeaway">
+      <div class="icon">🔑</div>
+      <p><strong>Key Point:</strong> China is the world's EV factory. The US and Europe don't produce enough for their own needs — making them dependent on imports. This is a <strong>serious risk</strong> for their economies and national security.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TABLE 3 ══ -->
+<div class="section" id="t3">
+  <div class="section-header">
+    <span class="sec-num red">TABLE 03</span>
+    <div>
+      <div class="sec-title">China's EV Export Trade Flows (2024)</div>
+      <div class="sec-source">📄 IEA PDF — Page 5 · Slide: "...and the world's largest electric car exporter"</div>
+    </div>
+  </div>
+  <div class="section-body">
+    <table>
+      <tr><th>Destination</th><th>Volume (Thousands)</th></tr>
+      <tr><td>🇪🇺 European Union</td><td class="val-red">390,000</td></tr>
+      <tr><td>🌏 Other Asia Pacific</td><td class="val-red">270,000</td></tr>
+      <tr><td>🌐 Others</td><td class="val-red">240,000</td></tr>
+      <tr><td>🌍 Other Europe</td><td class="val-red">230,000</td></tr>
+      <tr><td>🌎 Other North America</td><td class="val-red">40,000</td></tr>
+    </table>
+    <div class="explain red">
+      <h4>💡 What does this mean?</h4>
+      <p>China does not just sell EVs at home — it exports them to <strong>every major region in the world</strong>. Europe is the biggest buyer at 390,000 units. China's EVs go to Asia, Latin America, Africa, and beyond. In 2024, China accounted for <strong>40% of all global EV exports</strong> — meaning nearly half of all EVs traded internationally come from China.</p>
+    </div>
+    <div class="analogy">
+      <div class="icon">💡</div>
+      <p><strong>Simple Example:</strong> Imagine one shop in your city that sells to every other shop in town — and its products are the cheapest. Everyone depends on that one shop. That is exactly what China has become for EVs globally.</p>
+    </div>
+    <div class="takeaway">
+      <div class="icon">🔑</div>
+      <p><strong>Key Point:</strong> China exports EVs to <strong>every continent</strong>. This gives China enormous power to control global EV prices and supply. If China stops exporting, the whole world faces an EV shortage.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TABLE 4 ══ -->
+<div class="section" id="t4">
+  <div class="section-header">
+    <span class="sec-num">TABLE 04</span>
+    <div>
+      <div class="sec-title">EU EV Trade Flows (2024)</div>
+      <div class="sec-source">📄 IEA PDF — Page 6 · Slide: "The European Union remains a net exporter of electric cars"</div>
+    </div>
+  </div>
+  <div class="section-body">
+    <table>
+      <tr><th>Trade Route</th><th>Volume (Thousands)</th></tr>
+      <tr><td>🇪🇺 EU → Other Europe</td><td class="val-blue">450,000</td></tr>
+      <tr><td>🇨🇳 China → EU (Imports into EU)</td><td class="val-red">390,000 ⚠️</td></tr>
+      <tr><td>🇪🇺 EU → United States</td><td class="val-blue">110,000</td></tr>
+      <tr><td>🇪🇺 EU → Other Asia Pacific</td><td class="val-blue">60,000</td></tr>
+      <tr><td>🇪🇺 EU → Others</td><td class="val-blue">30,000</td></tr>
+    </table>
+    <div class="explain">
+      <h4>💡 What does this mean?</h4>
+      <p>The EU still exports more EVs than it imports — so it is technically a "net exporter." Its biggest export market is non-EU European countries at 450,000 units. BUT — the warning sign is that <strong>China exports 390,000 EVs INTO the EU</strong> — nearly matching the EU's biggest export corridor. This means <strong>1 in every 5 EVs</strong> sold in the EU comes from China. That is why the EU added extra tariffs (taxes) on Chinese EVs in 2024.</p>
+    </div>
+    <div class="analogy">
+      <div class="icon">💡</div>
+      <p><strong>Simple Example:</strong> You sell 450 books outside your shop. But someone else is selling 390 books <em>inside</em> your shop. That person is almost matching your own sales — in your own store. That is a serious threat. The EU's response? Add extra entry fees (tariffs) to make Chinese EVs more expensive.</p>
+    </div>
+    <div class="takeaway">
+      <div class="icon">🔑</div>
+      <p><strong>Key Point:</strong> EU exports <strong>450k EVs</strong> but China sends <strong>390k back into the EU</strong>. This near-equal competition forced the EU to impose tariffs on Chinese EVs in 2024 to protect its own car industry.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TABLE 5 ══ -->
+<div class="section" id="t5">
+  <div class="section-header">
+    <span class="sec-num gold">TABLE 05</span>
+    <div>
+      <div class="sec-title">US EV Trade Flows (2024)</div>
+      <div class="sec-source">📄 IEA PDF — Page 7 · Slide: "Electric car imports grew to make up 40% of US sales"</div>
+    </div>
+  </div>
+  <div class="section-body">
+    <table>
+      <tr><th>Source / Destination</th><th>Volume (Thousands)</th></tr>
+      <tr><td>🇲🇽 Mexico → US</td><td class="val-gold">140,000 🏆 Top Supplier</td></tr>
+      <tr><td>🇯🇵 Japan → US</td><td class="val-gold">140,000</td></tr>
+      <tr><td>🇪🇺 EU → US</td><td class="val-gold">120,000</td></tr>
+      <tr><td>🇰🇷 Korea → US</td><td class="val-gold">~120,000</td></tr>
+      <tr><td>🇺🇸 US → Canada</td><td class="val-blue">60,000</td></tr>
+    </table>
+    <div style="margin-bottom:16px;padding:10px 14px;background:#FFFBF0;border:1px solid var(--gold);font-size:13px;">
+      ⚡ <strong>40% of all US EV sales in 2024 were imported</strong> · Mexico's EV output doubled in 2024
+    </div>
+    <div class="explain gold">
+      <h4>💡 What does this mean?</h4>
+      <p>The US buys EVs from <strong>4 major partners</strong> — Mexico, Japan, EU, and Korea — each supplying roughly 20% of US imports. Mexico became the <strong>top supplier</strong> in 2024 because US companies built factories there (it is cheaper and closer). The big concern? <strong>40% of all EVs sold in the US were imported</strong> — meaning the US depends heavily on other countries for its EV supply.</p>
+    </div>
+    <div class="analogy">
+      <div class="icon">💡</div>
+      <p><strong>Simple Example:</strong> If 40% of the food on your dinner table came from other countries — and one day those countries stopped sending food — you would have a serious problem. That is exactly the risk the US faces with EVs.</p>
+    </div>
+    <div class="takeaway">
+      <div class="icon">🔑</div>
+      <p><strong>Key Point:</strong> 40% imports means the US is <strong>heavily dependent</strong> on foreign EV production. That is why the US government passed the <strong>Inflation Reduction Act</strong> — giving tax benefits only for US-made EVs — to push factories to be built inside America.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TABLE 6 ══ -->
+<div class="section" id="t6">
+  <div class="section-header">
+    <span class="sec-num orange">TABLE 06</span>
+    <div>
+      <div class="sec-title">BEV Price Premium vs Conventional Car — Emerging Markets</div>
+      <div class="sec-source">📄 IEA PDF — Page 8 · Slide: "Imports are bringing down prices in other markets"</div>
+    </div>
+  </div>
+  <div class="section-body">
+    <table>
+      <tr><th>Country</th><th>2023 Premium</th><th>2024 Premium</th><th>Chinese Import Share</th></tr>
+      <tr><td>🇹🇭 Thailand</td><td class="val-red">Very High</td><td class="val-green"><strong>0% ✅ PARITY</strong></td><td>~90%</td></tr>
+      <tr><td>🇮🇩 Indonesia</td><td class="val-red">~130%</td><td class="val-orange">~55%</td><td>~80%</td></tr>
+      <tr><td>🇧🇷 Brazil</td><td class="val-red">—</td><td class="val-orange">~40%</td><td>~75%</td></tr>
+      <tr><td>🇲🇽 Mexico</td><td class="val-red">~105%</td><td class="val-orange">~55%</td><td>~65%</td></tr>
+    </table>
+    <div class="explain orange">
+      <h4>💡 What does this mean?</h4>
+      <p>"Premium" means how much <strong>extra money</strong> you pay for an EV compared to a regular petrol car. If premium is +100%, the EV costs <strong>double</strong> the petrol car. If it is 0%, both cost the <strong>same</strong>. The clear pattern here is: <strong>the more Chinese EVs a country imports, the cheaper EVs become</strong>. Thailand imports 90% from China and now has <strong>zero price difference</strong> between EVs and petrol cars. Indonesia and Mexico halved their premiums in just one year.</p>
+    </div>
+    <div class="analogy">
+      <div class="icon">💡</div>
+      <p><strong>Simple Example:</strong> In Thailand, a ₹10 lakh petrol car now costs the same as an EV — thanks to cheap Chinese imports. In Indonesia, the EV used to cost double the petrol car. Now it only costs 55% more — and falling fast.</p>
+    </div>
+    <div class="takeaway">
+      <div class="icon">🔑</div>
+      <p><strong>Key Point:</strong> Chinese imports are the <strong>fastest tool to make EVs affordable</strong> — but it also makes these countries fully dependent on China. If China raises prices tomorrow, these countries have no backup.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TABLE 7 ══ -->
+<div class="section" id="t7">
+  <div class="section-header">
+    <span class="sec-num green">TABLE 07</span>
+    <div>
+      <div class="sec-title">China EV Price Competitiveness — BEV vs ICE Price Premium</div>
+      <div class="sec-source">📄 IEA PDF — Page 9 · Slide: "Price-competitiveness of electric cars in China"</div>
+    </div>
+  </div>
+  <div class="section-body">
+    <div style="margin-bottom:14px;padding:10px 14px;background:#F0FFF8;border:1px solid var(--green);font-size:12px;color:#005A3A;">
+      📌 <strong>BEV</strong> = Battery Electric Vehicle (100% electric) · <strong>PHEV</strong> = Plug-in Hybrid (electric + petrol) · <strong>ICE</strong> = Normal petrol/diesel car
+    </div>
+    <table>
+      <tr><th>Year</th><th>BEV Premium vs ICE</th><th>PHEV Premium vs ICE</th></tr>
+      <tr><td>2021</td><td class="val-green">~−10% (EV cheaper!)</td><td class="val-red">~+45% (expensive)</td></tr>
+      <tr><td>2022</td><td class="val-green">~−13%</td><td class="val-orange">~+10%</td></tr>
+      <tr><td>2023</td><td class="val-green">~−10%</td><td class="val-orange">~+10%</td></tr>
+      <tr><td>2024</td><td class="val-green"><strong>~−17% 🏆</strong></td><td class="val-green"><strong>~−10% (also cheaper!)</strong></td></tr>
+    </table>
+    <div class="explain green">
+      <h4>💡 What does this mean?</h4>
+      <p>A "negative premium" means the EV costs <strong>LESS</strong> than the petrol car — not more. In China in 2024, BEVs cost <strong>17% less</strong> than petrol cars. If a petrol car costs ₹10 lakh, the EV costs only ₹8.3 lakh. Even the hybrid (PHEV) is now 10% cheaper than a petrol car. This means <strong>2 out of every 3 electric cars</strong> sold in China in 2024 were cheaper than their petrol equivalent — even without any government subsidies. No other country in the world has achieved this.</p>
+    </div>
+    <div class="analogy">
+      <div class="icon">💡</div>
+      <p><strong>Simple Example:</strong> Imagine an LED bulb that gives more light AND costs less than a regular bulb. You would naturally buy the LED. That is exactly what happened in China — EVs now give more value AND cost less. So people naturally switched to EVs.</p>
+    </div>
+    <div class="takeaway">
+      <div class="icon">🔑</div>
+      <p><strong>Key Point:</strong> When EVs became cheaper than petrol cars — Chinese people stopped choosing petrol cars. Result? Nearly <strong>50% of all cars sold in China in 2024 were electric</strong>. Price is the single biggest driver of EV adoption.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TABLE 8 ══ -->
+<div class="section" id="t8">
+  <div class="section-header">
+    <span class="sec-num red">TABLE 08</span>
+    <div>
+      <div class="sec-title">Germany EV Price Premium — BEV vs ICE</div>
+      <div class="sec-source">📄 IEA PDF — Page 10 · Slide: "In Germany, fewer public incentives and costly EVs stall adoption"</div>
+    </div>
+  </div>
+  <div class="section-body">
+    <table>
+      <tr><th>Year</th><th>BEV Premium vs ICE</th><th>PHEV Premium vs ICE</th></tr>
+      <tr><td>2021</td><td class="val-orange">~+10%</td><td class="val-red">~+40%</td></tr>
+      <tr><td>2022</td><td class="val-orange">~+15%</td><td class="val-orange">~+27%</td></tr>
+      <tr><td>2023</td><td class="val-orange">~+17%</td><td class="val-red">~+45%</td></tr>
+      <tr><td>2024</td><td class="val-red"><strong>~+25% ⚠️ Rising!</strong></td><td class="val-red"><strong>~+65% ⚠️ Very High!</strong></td></tr>
+    </table>
+    <div class="explain red">
+      <h4>💡 What does this mean?</h4>
+      <p>Germany is the <strong>opposite of China</strong>. While China's EV prices are getting cheaper every year, Germany's EVs are getting <strong>more expensive</strong> compared to petrol cars. In 2024, a BEV in Germany costs <strong>25% more</strong> than a petrol car. To make things worse, the German government suddenly <strong>removed EV subsidies</strong> in late 2023. Without price support and with expensive EVs — German people simply stopped buying EVs. Sales stagnated.</p>
+    </div>
+    <div class="analogy">
+      <div class="icon">💡</div>
+      <p><strong>Simple Example:</strong> Imagine a new phone that costs 25% more than the old model and has no exchange offer. Most people would just keep the old phone. That is exactly what Germans did — they kept buying petrol cars because EVs were too expensive.</p>
+    </div>
+    <div class="takeaway">
+      <div class="icon">🔑</div>
+      <p><strong>Key Point:</strong> Germany proves that <strong>high prices + no government support = EV adoption fails</strong>. Even a highly developed, tech-savvy country cannot force EV adoption if the price is too high. This is the opposite lesson from China.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TABLE 9 ══ -->
+<div class="section" id="t9">
+  <div class="section-header">
+    <span class="sec-num">TABLE 09</span>
+    <div>
+      <div class="sec-title">Battery & Mineral Price Index (2022 = 100)</div>
+      <div class="sec-source">📄 IEA PDF — Page 11 · Slide: "Battery price continues to fall, but China's price advantage widens"</div>
+    </div>
+  </div>
+  <div class="section-body">
+    <table>
+      <tr><th>Item</th><th>2022</th><th>2023</th><th>2024</th><th>Total Change</th></tr>
+      <tr><td>⚡ Battery Pack (Global)</td><td>100</td><td>~87</td><td>~80</td><td class="val-green">−20%</td></tr>
+      <tr><td>🪨 Lithium Carbonate</td><td>100</td><td>~25</td><td>~20</td><td class="val-green">−80% 🔥</td></tr>
+      <tr><td>⬛ Graphite Sphere</td><td>100</td><td>~100</td><td>~70</td><td class="val-green">−30%</td></tr>
+      <tr><td>🔩 Nickel Sulphate</td><td>100</td><td>~95</td><td>~83</td><td class="val-green">−17%</td></tr>
+    </table>
+    <div style="margin-bottom:16px;">
+      <table>
+        <tr><th>Region</th><th>Battery Price Drop (2024)</th></tr>
+        <tr><td>🇨🇳 China</td><td class="val-green"><strong>−30% (Fastest!)</strong></td></tr>
+        <tr><td>🇪🇺 Europe</td><td class="val-green">−20%</td></tr>
+        <tr><td>🇺🇸 North America</td><td class="val-green">−20%</td></tr>
+      </table>
+    </div>
+    <div class="explain">
+      <h4>💡 What does this mean?</h4>
+      <p>The battery is the most expensive part of an EV — it is like the engine of a petrol car. When battery prices fall, EVs become cheaper. In 2024, global battery prices fell <strong>20%</strong>. But in China, they fell <strong>30%</strong> — the fastest in the world. The key raw material — <strong>Lithium carbonate</strong> — crashed by a massive <strong>80%</strong> since 2022. This is the main reason why Chinese EVs are getting so much cheaper so fast.</p>
+    </div>
+    <div class="analogy">
+      <div class="icon">💡</div>
+      <p><strong>Simple Example:</strong> If the steel used to make bikes became 80% cheaper — bike prices would crash too. Lithium is to EVs what steel is to bikes. Lithium got 80% cheaper — so EV batteries got 20-30% cheaper — so EVs got cheaper for everyone.</p>
+    </div>
+    <div class="takeaway">
+      <div class="icon">🔑</div>
+      <p><strong>Key Point:</strong> China's battery prices are falling <strong>faster than anyone else's</strong>. This widens China's cost advantage every year — making it harder for US and EU manufacturers to compete on price.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TABLE 10 ══ -->
+<div class="section" id="t10">
+  <div class="section-header">
+    <span class="sec-num green">TABLE 10</span>
+    <div>
+      <div class="sec-title">Global Public Charging Points Stock (Millions)</div>
+      <div class="sec-source">📄 IEA PDF — Page 13 · Slide: "Access to public charging points is key to supporting mass adoption"</div>
+    </div>
+  </div>
+  <div class="section-body">
+    <table>
+      <tr><th>Year</th><th>🇨🇳 China</th><th>🇪🇺 Europe</th><th>🇺🇸 US</th><th>Rest of World</th><th>Total</th></tr>
+      <tr><td>2018</td><td>~0.3M</td><td>~0.1M</td><td>~0.05M</td><td>~0.05M</td><td class="val-blue">~0.5M</td></tr>
+      <tr><td>2020</td><td>~0.8M</td><td>~0.2M</td><td>~0.1M</td><td>~0.1M</td><td class="val-blue">~1.3M</td></tr>
+      <tr><td>2022</td><td>~1.8M</td><td>~0.5M</td><td>~0.15M</td><td>~0.1M</td><td class="val-blue">~2.8M</td></tr>
+      <tr><td>2023</td><td>~2.7M</td><td>~0.9M</td><td>~0.2M</td><td>~0.2M</td><td class="val-blue">~4.1M</td></tr>
+      <tr><td>2024</td><td class="val-green">~3.6M</td><td class="val-blue">~1.2M</td><td class="val-red">~0.3M</td><td>~0.3M</td><td class="val-green"><strong>~5.5M</strong></td></tr>
+    </table>
+    <div class="explain green">
+      <h4>💡 What does this mean?</h4>
+      <p>This table shows how many <strong>public EV charging stations</strong> exist in each region. Think of these like petrol pumps — but for electric cars. The total nearly <strong>doubled in just 2 years</strong> (2022 to 2024). China alone has <strong>3.6 million chargers</strong> — that is 65% of all public chargers in the entire world. The US, despite being the world's 2nd largest EV market, has only 300,000 chargers — which is very low for its size.</p>
+    </div>
+    <div class="analogy">
+      <div class="icon">💡</div>
+      <p><strong>Simple Example:</strong> Imagine buying a phone but there are very few charging points in your city. You would be nervous. The same logic applies to EVs — if there are not enough public chargers, people hesitate to buy EVs. More chargers = more confidence = more EV purchases.</p>
+    </div>
+    <div class="takeaway">
+      <div class="icon">🔑</div>
+      <p><strong>Key Point:</strong> China has <strong>65% of all global public chargers</strong>. The US urgently needs to build more charging infrastructure to support growing EV demand and reduce "range anxiety."</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TABLE 11 ══ -->
+<div class="section" id="t11">
+  <div class="section-header">
+    <span class="sec-num">TABLE 11</span>
+    <div>
+      <div class="sec-title">Number of EVs per Public Charger (2024)</div>
+      <div class="sec-source">📄 IEA PDF — Page 13 · Slide: "Access to public charging points is key to supporting mass adoption"</div>
+    </div>
+  </div>
+  <div class="section-body">
+    <table>
+      <tr><th>Region</th><th>EVs per Public Charger</th><th>Meaning</th></tr>
+      <tr><td>🇰🇷 Korea</td><td class="val-green"><strong>~2</strong> 🏆 Best</td><td>Very well-planned infrastructure</td></tr>
+      <tr><td>🇨🇳 China</td><td class="val-green">~10</td><td>Good ratio</td></tr>
+      <tr><td>🌍 World Average</td><td class="val-blue">~11</td><td>Manageable</td></tr>
+      <tr><td>🇪🇺 European Union</td><td class="val-orange">~15</td><td>Needs improvement</td></tr>
+      <tr><td>🇳🇴 Norway</td><td class="val-red">~32</td><td>EVs outpaced chargers!</td></tr>
+      <tr><td>🇺🇸 United States</td><td class="val-red">~32</td><td>Big gap — needs urgent action</td></tr>
+    </table>
+    <div class="explain">
+      <h4>💡 What does this mean?</h4>
+      <p>This number tells you how many EVs are <strong>sharing one charger</strong>. If the number is low (like Korea's 2) — it means there are plenty of chargers for everyone. If it is high (like US at 32) — it means <strong>32 EVs are competing for 1 charger</strong>, which causes long waiting times. Surprisingly, Norway — the most mature EV market in the world — also has 32 EVs per charger, showing that even advanced markets can get outpaced by their own EV growth.</p>
+    </div>
+    <div class="analogy">
+      <div class="icon">💡</div>
+      <p><strong>Simple Example:</strong> Imagine a school with 32 students and only 1 drinking water tap. Everyone has to wait a long time. Now imagine a school with 2 students per tap — everyone gets water quickly. Korea is the 2nd school. The US is the 1st school — for EV chargers.</p>
+    </div>
+    <div class="takeaway">
+      <div class="icon">🔑</div>
+      <p><strong>Key Point:</strong> As EV sales grow toward 40% by 2030, charger deployment must grow <strong>even faster</strong>. Otherwise waiting times at chargers will become a major problem and slow down adoption.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TABLE 12 ══ -->
+<div class="section" id="t12">
+  <div class="section-header">
+    <span class="sec-num orange">TABLE 12</span>
+    <div>
+      <div class="sec-title">Highway Fast Charger Coverage (2024)</div>
+      <div class="sec-source">📄 IEA PDF — Page 16 · Slide: "Fast chargers facilitate longer distance travel"</div>
+    </div>
+  </div>
+  <div class="section-body">
+    <table>
+      <tr><th>Region</th><th>Fast + Ultra-fast Coverage</th><th>Ultra-fast Only</th><th>Petrol Stations / 50km</th></tr>
+      <tr><td>🇪🇺 European Union</td><td class="val-green">~80%</td><td class="val-green">~60%</td><td>~5</td></tr>
+      <tr><td>🌍 Europe (Broad)</td><td class="val-green">~70%</td><td class="val-green">~55%</td><td>~5</td></tr>
+      <tr><td>🇺🇸 United States</td><td class="val-orange">~35%</td><td class="val-red">~15%</td><td>~3.5</td></tr>
+      <tr><td>🇨🇦 Canada</td><td class="val-red">~30%</td><td class="val-red">~10%</td><td>~3</td></tr>
+    </table>
+    <div class="explain orange">
+      <h4>💡 What does this mean?</h4>
+      <p>"Coverage" means what percentage of highways have a fast charger every 50 km (like a petrol pump). Europe is doing well — <strong>80% of EU highways</strong> have fast chargers within every 50 km. But the US covers only <strong>35% of highways</strong> — meaning on 65% of US highways, you might not find a fast charger nearby. This causes "range anxiety" — the fear of running out of battery on a long trip. Also, even where chargers exist, <strong>petrol stations still outnumber chargers by 3 to 5 times</strong>.</p>
+    </div>
+    <div class="analogy">
+      <div class="icon">💡</div>
+      <p><strong>Simple Example:</strong> Imagine driving on a highway and needing to refuel. In Europe, you find a charger every 50 km. In the US, you might drive 150 km before finding one. That is the difference — and it makes US drivers nervous about long road trips in EVs.</p>
+    </div>
+    <div class="takeaway">
+      <div class="icon">🔑</div>
+      <p><strong>Key Point:</strong> Europe leads highway charging. The US has a <strong>major infrastructure gap</strong> with only 35% coverage. Until highway charging improves, long-distance EV travel in the US remains inconvenient.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TABLE 13 ══ -->
+<div class="section" id="t13">
+  <div class="section-header">
+    <span class="sec-num green">TABLE 13</span>
+    <div>
+      <div class="sec-title">Electric Range Added in 5 Minutes by Charger Type</div>
+      <div class="sec-source">📄 IEA PDF — Page 14 · Slide: "Availability of fast and ultra-fast chargers is steadily increasing"</div>
+    </div>
+  </div>
+  <div class="section-body">
+    <table>
+      <tr><th>Charger Type</th><th>Range Added in 5 Minutes</th></tr>
+      <tr><td>🐢 Slow Charger</td><td class="val-red">~20 km</td></tr>
+      <tr><td>⚡ Fast Charger</td><td class="val-orange">~75 km</td></tr>
+      <tr><td>🚀 Ultra-fast Charger</td><td class="val-blue">~130–195 km</td></tr>
+      <tr><td>🔥 MW-Scale (Latest Chinese Tech)</td><td class="val-green"><strong>~210–520 km 🏆</strong></td></tr>
+    </table>
+    <div class="explain green">
+      <h4>💡 What does this mean?</h4>
+      <p>Different chargers add different amounts of battery range in the same 5 minutes. A slow charger only adds <strong>20 km</strong> of range — useless for quick stops. An ultra-fast charger adds up to <strong>195 km</strong> in 5 minutes — much better. China's newest MW-scale technology can add <strong>520 km in just 5 minutes</strong> — that is almost the same as filling a full tank of petrol. This technology could eliminate the biggest complaint people have about EVs: charging takes too long.</p>
+    </div>
+    <div class="analogy">
+      <div class="icon">💡</div>
+      <p><strong>Simple Example:</strong> A slow charger is like filling water with a teaspoon. A fast charger is like using a glass. Ultra-fast is like using a bottle. China's MW-scale charger is like using a bucket — same time, massively more range added.</p>
+    </div>
+    <div class="takeaway">
+      <div class="icon">🔑</div>
+      <p><strong>Key Point:</strong> China's MW-scale chargers can charge as fast as petrol refuelling. But this technology is only useful if the <strong>infrastructure is built everywhere</strong> — which requires massive government and private investment.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TABLE 14 ══ -->
+<div class="section" id="t14">
+  <div class="section-header">
+    <span class="sec-num">TABLE 14</span>
+    <div>
+      <div class="sec-title">EV Sales Share Forecast — 2024 vs 2030</div>
+      <div class="sec-source">📄 IEA PDF — Page 18 · Slide: "Electric car sales break records while markets diversify"</div>
+    </div>
+  </div>
+  <div class="section-body">
+    <table>
+      <tr><th>Region</th><th>2024 EV Share</th><th>2030 EV Share (Forecast)</th><th>Change</th></tr>
+      <tr><td>🇨🇳 China</td><td>~50%</td><td class="val-green"><strong>~70%</strong></td><td class="val-green">+20 points</td></tr>
+      <tr><td>🇪🇺 Europe</td><td>~20%</td><td class="val-blue">~35%</td><td class="val-blue">+15 points</td></tr>
+      <tr><td>🌍 World Average</td><td>~20%</td><td class="val-blue"><strong>>40%</strong></td><td class="val-blue">+20 points</td></tr>
+      <tr><td>🇺🇸 United States</td><td>~8%</td><td class="val-orange">~15%</td><td class="val-orange">+7 points</td></tr>
+      <tr><td>🌏 Southeast Asia</td><td>~8%</td><td class="val-orange">~15%</td><td class="val-orange">+7 points</td></tr>
+      <tr><td>🌎 Latin America</td><td>~5%</td><td class="val-orange">~10%</td><td class="val-orange">+5 points</td></tr>
+    </table>
+    <div class="explain">
+      <h4>💡 What does this mean?</h4>
+      <p>This table shows where each region is <strong>today</strong> and where they are <strong>headed by 2030</strong>. China will have <strong>70% of all car sales being electric</strong> — meaning 7 out of every 10 new cars sold will be EVs. The global average will cross <strong>40%</strong> — making EVs the single most popular type of new car. Even lagging regions like Latin America and Southeast Asia will <strong>double their EV share</strong> by 2030.</p>
+    </div>
+    <div class="analogy">
+      <div class="icon">💡</div>
+      <p><strong>Simple Example:</strong> Think of how smartphones replaced Nokia phones between 2008 and 2015. By 2030, EVs will replace petrol cars in the same way — not completely, but they will become the clear majority in most markets.</p>
+    </div>
+    <div class="takeaway">
+      <div class="icon">🔑</div>
+      <p><strong>Key Point:</strong> By 2030 — <strong>more than 1 in 3 new cars</strong> sold globally will be electric. China alone will be at 70%. The EV transition is not coming — it is already here and accelerating.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TABLE 15 ══ -->
+<div class="section" id="t15">
+  <div class="section-header">
+    <span class="sec-num dark">TABLE 15</span>
+    <div>
+      <div class="sec-title">Electric Vehicle Sales Across All Vehicle Modes (2024)</div>
+      <div class="sec-source">📄 IEA PDF — Page 19 · Slide: "Electrification goes beyond cars"</div>
+    </div>
+  </div>
+  <div class="section-body">
+    <table>
+      <tr><th>Vehicle Type</th><th>2023 Sales</th><th>2024 Sales</th><th>Growth</th><th>2030 Forecast</th></tr>
+      <tr><td>🛵 Two/Three-Wheelers</td><td>~10M</td><td>~10M</td><td class="val-orange">~0%</td><td class="val-green">~31M</td></tr>
+      <tr><td>🚐 Light Commercial Vehicles</td><td>~0.5M</td><td>~0.7M</td><td class="val-blue">+40%</td><td class="val-green">~2.4M</td></tr>
+      <tr><td>🚌 Buses</td><td>~0.15M</td><td>~0.2M</td><td class="val-blue">+33%</td><td class="val-green">~0.65M</td></tr>
+      <tr><td>🚛 Trucks</td><td>~0.1M</td><td>~0.18M</td><td class="val-green"><strong>+80% 🏆 Fastest!</strong></td><td class="val-green">~0.35M+</td></tr>
+    </table>
+    <div class="explain dark">
+      <h4>💡 What does this mean?</h4>
+      <p>Electrification is not just happening to passenger cars — it is spreading to <strong>all vehicle types</strong>. Electric trucks saw the highest growth of any vehicle type in 2024 at <strong>80%</strong>. Electric buses grew 33%, delivery vans grew 40%. By 2030, two and three-wheelers — mainly in India and Southeast Asia — will reach <strong>31 million units</strong>, making them the biggest electric vehicle category by volume globally.</p>
+    </div>
+    <div class="analogy">
+      <div class="icon">💡</div>
+      <p><strong>Simple Example:</strong> First, smartphones replaced basic phones. Then tablets replaced laptops. Then smartwatches arrived. Electrification is following the same pattern — starting with cars, then spreading to bikes, buses, trucks, and beyond.</p>
+    </div>
+    <div class="takeaway">
+      <div class="icon">🔑</div>
+      <p><strong>Key Point:</strong> Electric trucks growing <strong>80% in one year</strong> signals that commercial transport electrification has truly begun. By 2030, the entire vehicle industry — not just cars — will be going electric.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TABLE 16 ══ -->
+<div class="section" id="t16">
+  <div class="section-header">
+    <span class="sec-num gold">TABLE 16</span>
+    <div>
+      <div class="sec-title">Heavy-Duty Truck Purchase Price & Total Cost of Ownership (2024)</div>
+      <div class="sec-source">📄 IEA PDF — Page 20 · Slide: "Battery electric trucks are already cost-competitive in China"</div>
+    </div>
+  </div>
+  <div class="section-body">
+    <div style="margin-bottom:14px;padding:10px 14px;background:#FFFBF0;border:1px solid var(--gold);font-size:12px;">
+      📌 <strong>TCO</strong> = Total Cost of Ownership = all costs over the truck's lifetime (purchase + fuel + maintenance + driver). Measured in USD per km driven.
+    </div>
+    <table>
+      <tr><th>Region</th><th>Diesel Price</th><th>BEV Price</th><th>FCEV Price</th><th>Diesel TCO ($/km)</th><th>BEV TCO ($/km)</th></tr>
+      <tr><td>🇺🇸 United States</td><td>~$140k</td><td class="val-red">~$340k</td><td>~$455k</td><td>~$1.0</td><td class="val-red">~$1.3</td></tr>
+      <tr><td>🇪🇺 European Union</td><td>~$125k</td><td class="val-red">~$415k</td><td>~$455k</td><td>~$1.0</td><td class="val-orange">~$1.1</td></tr>
+      <tr><td>🇨🇳 China</td><td>~$65k</td><td class="val-green">~$155k</td><td>~$245k</td><td>~$0.60</td><td class="val-green"><strong>~$0.58 ✅ Cheaper!</strong></td></tr>
+    </table>
+    <div class="explain gold">
+      <h4>💡 What does this mean?</h4>
+      <p>This compares three types of heavy trucks: regular diesel, battery electric (BEV), and hydrogen fuel cell (FCEV). In the US and EU, electric trucks are still <strong>much more expensive to buy</strong> upfront. But in China, a BEV truck costs only $155k — much more affordable. More importantly, China's BEV truck costs <strong>$0.58 per km</strong> to operate — which is <strong>cheaper than diesel at $0.60</strong>. China is the only country in the world where electric trucks are already cheaper than diesel trucks on a total cost basis. By 2030, the US and EU will reach parity too.</p>
+    </div>
+    <div class="analogy">
+      <div class="icon">💡</div>
+      <p><strong>Simple Example:</strong> An electric scooter costs more upfront than a petrol scooter. But over 3 years, it costs much less to charge than to fill petrol. So the total cost is lower. China's electric trucks have already reached this point — the EU and US will get there by 2030.</p>
+    </div>
+    <div class="takeaway">
+      <div class="icon">🔑</div>
+      <p><strong>Key Point:</strong> China is <strong>the only market</strong> where electric trucks already beat diesel on total cost. Hydrogen trucks (FCEV) remain the most expensive option everywhere and are unlikely to win the commercial trucking race.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TABLE 17 ══ -->
+<div class="section" id="t17">
+  <div class="section-header">
+    <span class="sec-num orange">TABLE 17</span>
+    <div>
+      <div class="sec-title">Oil Displacement by EVs (mb/d = Million Barrels per Day)</div>
+      <div class="sec-source">📄 IEA PDF — Page 24 · Slide: "EVs to displace more than 5 mb/d by 2030"</div>
+    </div>
+  </div>
+  <div class="section-body">
+    <table>
+      <tr><th>Year</th><th>Oil Displaced (mb/d)</th><th>Change</th></tr>
+      <tr><td>2023</td><td class="val-blue">~1.0 mb/d</td><td>—</td></tr>
+      <tr><td>2024</td><td class="val-orange"><strong>~1.3 mb/d</strong></td><td class="val-green">+30% year-on-year</td></tr>
+      <tr><td>2030 (Forecast)</td><td class="val-green"><strong>>5.0 mb/d</strong></td><td class="val-green">+285% from 2024</td></tr>
+    </table>
+    <div style="margin-bottom:16px;padding:10px 14px;background:#FFF5F0;border:1px solid var(--orange);font-size:12px;">
+      ⚡ <strong>2024 displacement = Japan's entire annual transport oil consumption</strong>
+    </div>
+    <div class="explain orange">
+      <h4>💡 What does this mean?</h4>
+      <p>"Oil displacement" means how much petrol and diesel EVs are <strong>saving the world from burning</strong>. In 2024, EVs saved <strong>1.3 million barrels of oil every single day</strong>. That is equal to the total amount of oil Japan uses for all its transport every year. By 2030, this will jump to <strong>5+ million barrels per day</strong> — which is roughly <strong>5% of the entire world's current daily oil demand</strong> being eliminated by EVs alone. This is transformational for global energy and climate.</p>
+    </div>
+    <div class="analogy">
+      <div class="icon">💡</div>
+      <p><strong>Simple Example:</strong> Imagine a city that uses 1,000 litres of water per day from a river. EVs are like installing water-saving taps — by 2030 they will save 50 litres every day without anyone noticing. For oil, the scale is massive — 5 million barrels is a huge amount being removed from global oil demand permanently.</p>
+    </div>
+    <div class="takeaway">
+      <div class="icon">🔑</div>
+      <p><strong>Key Point:</strong> EVs are already meaningfully cutting global oil demand. By 2030, the impact will be <strong>4× bigger</strong>. For oil-producing countries, this is not a future threat — it is happening right now and accelerating.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ TABLE 18 ══ -->
+<div class="section" id="t18">
+  <div class="section-header">
+    <span class="sec-num red">TABLE 18</span>
+    <div>
+      <div class="sec-title">Government Tax Revenue Impact — 2024 vs 2030 (USD Billion)</div>
+      <div class="sec-source">📄 IEA PDF — Page 25 · Slide: "Electrification is changing the tax landscape"</div>
+    </div>
+  </div>
+  <div class="section-body">
+    <table>
+      <tr><th>Region</th><th>2024 Tax Revenue</th><th>2030 Tax Revenue</th><th>Change</th></tr>
+      <tr><td>🇨🇳 China</td><td>~$47B</td><td>~$46B</td><td class="val-orange">~−$1B</td></tr>
+      <tr><td>🇺🇸 United States</td><td>~$32B</td><td>~$34B</td><td class="val-green">~+$2B</td></tr>
+      <tr><td>🇪🇺 Europe</td><td>~$310B</td><td>~$270B</td><td class="val-red"><strong>~−$40B ⚠️</strong></td></tr>
+      <tr><td>🌍 Rest of World</td><td>~$180B</td><td>~$185B</td><td class="val-green">~+$5B</td></tr>
+    </table>
+    <div style="margin-bottom:16px;padding:16px 20px;background:#FFF0F3;border:2px solid var(--red);text-align:center;">
+      <div style="font-family:'Syne',sans-serif;font-size:42px;font-weight:800;color:var(--red);line-height:1;">$65 BILLION</div>
+      <div style="font-size:13px;color:#7A0020;margin-top:4px;">Projected Global Tax Revenue Shortfall by 2030 — Without Reform</div>
+    </div>
+    <div class="explain red">
+      <h4>💡 What does this mean?</h4>
+      <p>Governments earn huge money through <strong>fuel taxes</strong> — every time you buy petrol, a portion goes to the government. As EVs replace petrol cars, people buy less petrol — so governments collect <strong>less fuel tax</strong>. Europe faces the biggest problem — losing <strong>$40 billion per year</strong> in tax revenue by 2030. Globally, the shortfall reaches <strong>$65 billion per year</strong>. Without new taxes to replace this lost income, governments will have less money for roads, schools, and public services.</p>
+    </div>
+    <div class="analogy">
+      <div class="icon">💡</div>
+      <p><strong>Simple Example:</strong> A school earns money by selling canteen food. If students start bringing their own food from home, the canteen earns less. The school needs a new income source — like a library fee or activity fee. Governments face the same problem — they need new ways to collect revenue as fuel taxes shrink.</p>
+    </div>
+    <div class="takeaway">
+      <div class="icon">🔑</div>
+      <p><strong>Key Point:</strong> The EV revolution creates a <strong>$65 billion tax hole</strong> for governments by 2030. The solution — road pricing, electricity taxes, or per-km charges — requires political courage and careful planning to avoid slowing down EV adoption itself.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="site-footer">
+  <p><strong>Source:</strong> IEA Global EV Outlook 2025 — International Energy Agency, Paris · Published May 15, 2025 · iea.org</p>
+  <p>All 18 Tables Explained · Global EV Outlook 2025</p>
+</div>
+
+</body>
+</html>
